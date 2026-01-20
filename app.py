@@ -8,7 +8,7 @@ st.set_page_config(page_title="Ruta a los $1,200", page_icon="📱", layout="wid
 
 # --- 1. CONEXIÓN A DATOS (GOOGLE SHEETS) ---
 # ¡ASEGÚRATE DE QUE ESTE ENLACE SEA EL CSV (output=csv)!
-sheet_url = "TU_ENLACE_AQUI" 
+sheet_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSJ7HUzdMFxd__pO3CqfckWPtpH-Z_9we9fOq5xaBGaprEiWHBGnQ-hcH4t-I-jZp35LGhElnXe65N/pub?output=csv" 
 
 @st.cache_data(ttl=60)
 def load_data():
