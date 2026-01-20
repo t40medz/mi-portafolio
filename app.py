@@ -21,18 +21,6 @@ def load_data():
 
 df_portfolio = load_data()
 
-# --- BLOQUE DE DIAGNÓSTICO (NUEVO) ---
-if df_portfolio.empty:
-    st.error("⚠️ El archivo está vacío. Revisa el enlace.")
-else:
-    # Esto te mostrará en pantalla qué columnas leyó realmente
-    st.write("👀 Columnas detectadas:", df_portfolio.columns.tolist()) 
-    
-    # Verificamos si existe la columna 'Ticker' antes de seguir
-    if 'Ticker' not in df_portfolio.columns:
-        st.error(f"❌ Error: No encuentro la columna 'Ticker'. Asegúrate de que en Google Sheets la columna B se llame exactamente 'Ticker'.")
-        st.stop() # Detiene la app aquí para que no explote
-
 # --- 2. OBTENER PRECIOS EN TIEMPO REAL ---
 def get_current_prices(tickers):
     if not tickers:
