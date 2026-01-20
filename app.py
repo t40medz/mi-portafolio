@@ -10,7 +10,7 @@ st.set_page_config(page_title="Ruta a los $1,200", page_icon="📱", layout="wid
 # ¡ASEGÚRATE DE QUE ESTE ENLACE SEA EL CSV (output=csv)!
 sheet_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSJ7HUzdMFxd__pO3CqfckWPtpH-Z_9we9fOq5xaBGaprEiWHBGnQ-hcH4t-I-jZp35LGhElnXe65N/pub?output=csv" 
 
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=10)
 def load_data():
     try:
         # header=0 asegura que lea la primera fila como títulos
